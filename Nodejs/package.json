@@ -1,0 +1,22 @@
+{
+  "name": "poshtranslate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Tarek Samy",
+  "scripts": {
+    "start": "nodemon index.js",
+    "build": "node index.js"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "e": "^0.2.2",
+    "express": "^4.17.3",
+    "mongoose": "^6.8.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

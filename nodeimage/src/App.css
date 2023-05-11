@@ -1,0 +1,257 @@
+
+:root{
+  --white: rgb(253, 253, 253);
+  --black:rgb(38, 38, 38);
+  --light-black:rgba(80, 80, 80, 0.201);
+  --grey:rgba(80, 80, 80, 0.744);
+}
+*{
+  font-family: 'Manrope', sans-serif !important;
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-size:15px;
+  
+  
+}
+body{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  
+}
+nav{
+  display:flex;
+  background-color: rgb(253, 253, 253);
+  padding:16px 32px;
+  border-bottom:0.1px solid rgb(225, 225, 225);
+  justify-content:space-between;
+  align-items:center;
+  
+}
+.nav-main{
+  display:flex;
+  gap:32px;
+}
+.imgg{
+
+  width: 200px;
+
+}
+.btn {
+  display: block;
+  width: 100%;
+  padding: 20px;
+ 
+  outline: 0;
+  border: 0;
+  color: white;
+
+  transition: 0.3s;}
+  
+.nav-links{
+  display:flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #048A8F;
+  letter-spacing: -0.5px;
+font-weight: 900;
+
+}
+a:hover{
+  color:rgb(122, 120, 120);
+  transition: all 0.5s ease;
+}
+.posh:hover{
+  color: #000000;
+  transition: all 0.5s ease;
+}
+.nav-link{
+  text-decoration: none;
+  
+}
+
+
+.btn{
+  padding:10px 17px;
+  border-radius:90px 30px;
+  border:none;
+  font-weight: bold;
+  font-size: 20px;
+  
+  
+}
+
+.btn-primary{
+  background-color:#01babf;
+  color:var(--white);
+  
+
+}
+
+
+.btn-primary:hover, .btn-secondary:hover{
+  background-color:var(--light-bla);
+  color:var(--black);
+  transition:all 0.5s ease;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.bb{
+  font-size: 1pc;
+  margin-top: 10px;
+  width: 40%;
+  
+position: absolute;
+margin-top: 22%;
+
+
+ 
+}
+.form__input {
+  display: block;
+  width: 100%;
+  padding: 20px;
+
+  background: darken(#fff, 3%);
+  border: 0;
+  outline: 0;
+  transition: 0.3s;}
+
+
+ .sss{
+  width: 60%;
+  margin-left: 35%;
+  margin-top: -10%;
+ }
+
+*{
+  box-sizing: border-box;
+  transition: all 0.2s linear;
+}
+
+cf::after, cf::before{
+  display: table;
+  content: ' ';
+  clear: both;
+}
+
+a{
+  text-decoration: underline;
+  color: initial;
+  font-weight: bold;
+}
+
+body{
+  font-family: 'Raleway', sans-serif;
+  background: rgb(253, 253, 253);
+  text-align: center;
+}
+
+h1{
+  text-transform: uppercase;
+  font-size: 2.3pc;
+width: 40%;
+  color: #01babf;
+position: absolute;
+margin-top: 15%
+;
+
+}
+
+    
+  
+
+h6{
+  font-weight: normal;
+}
+
+.productRow{
+  width: 100%;
+}
+
+.shoesContainer{
+  width: 350px;
+  background: rgba(255, 255, 255, 0);
+  margin: 10px 50px;
+  margin-left: 10px;
+  float: left;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+ 
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0, 0.15);
+  cursor: pointer;
+background-color: #ffffff;
+border-radius: 10%;
+height: 100% ;
+
+}
+@import 'bootstrap/dist/css/bootstrap.min.css';
+  
+    .shoesPhoto{
+      position: relative;}
+      
+      img{
+        width: 100px;
+        
+      }
+      
+  .buy{
+    background-color: #01babf;
+    padding: 10px 13px ;
+    
+    border: 0px solid;
+    border-radius: 10pc;
+    margin: 14px;
+  }
+    
+  
+  h3{
+    font-weight: 900;
+    font-size: 14px;
+  }
+  
+  span{
+    font-size: 12px;
+    color: #727677;
+    text-transform: lowercase;
+  }
+  
+  .price{
+    font-size: 28px;
+    color: #01babf;
+    letter-spacing: 2px;
+    font-weight: 900;}
+      
+      sup.value{
+        font-size: 16px;
+        margin-top: 0;
+        }
+
+
+
+  .shoesContainer:hover{
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0, 0.15);
+  }
+    
+
+
+
+#footer{
+  width: 100%;
+  clear: both;
+  padding: 5px 5px;
+}
