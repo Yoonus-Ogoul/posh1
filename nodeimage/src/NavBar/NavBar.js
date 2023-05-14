@@ -41,9 +41,9 @@ const NavBar = () => {
           <li class="nav-link">
             <a href=""   onClick={() => navigate("/Admin")}> Admin</a>
           </li>
-          <li class="nav-link">
+          {/* <li class="nav-link">
             <a href=""   onClick={() => navigate("/Payment")}> Payment</a>
-          </li>
+          </li> */}
         </ul>
       </div>
     

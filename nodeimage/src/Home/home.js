@@ -7,12 +7,14 @@ import NavBar from "../NavBar/NavBar";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 function Home() {
-  
+ ;
+ const [price, setPrice] = useState([]);
   const [image, setImage] = useState([]);
   const [userDetails, setUserDetails] = useState({
     name: "",
     email: "",
     address: "",
+   
   });
 
   useEffect(() => {
@@ -50,9 +52,12 @@ function Home() {
                 | <i class="fa fa-tags"></i>
               </span>
               <p class="price">
-                QR{image.pri},<sup>99</sup>
+                ${image.pri}
               </p>
-              <button className="buy" onClick={handleShow}>
+              <button className="buy" onClick={()=>{
+                handleShow();
+                setPrice(image.pri);
+              }}>
                 BUY NOW
               </button>
             </div>
@@ -110,7 +115,7 @@ function Home() {
                   purchase_units: [
                     {
                       amount: {
-                        value: "1.99",
+                        value : price
                       },
                     },
                   ],
@@ -127,6 +132,8 @@ function Home() {
                     Email: userDetails.email,
                     Address: userDetails.address,
                     PaymentID : details.id,
+                    Price : image.pri,
+                    
                   };
                   console.log("herer ", userDetails);
                   axios
