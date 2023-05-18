@@ -47,9 +47,9 @@ function Home() {
             </div>
             <div class="shoesInfo">
               <h3>{image.name}</h3>
-              <span>info</span>
+              
               <span>
-                | <i class="fa fa-tags"></i>
+                 {image.description}<i class="fa fa-tags"></i>
               </span>
               <p class="price">
                 ${image.pri}
@@ -132,7 +132,7 @@ function Home() {
                     Email: userDetails.email,
                     Address: userDetails.address,
                     PaymentID : details.id,
-                    Price : image.pri,
+                
                     
                   };
                   console.log("herer ", userDetails);

@@ -6,7 +6,8 @@ const Admin = () => {
   const [selectedPrice, setSelectedPrice] = useState("");
   const [selectedName, setSelectedName] = useState("");
   const [selectedImageUrl, setSelectedImageUrl] = useState("");
-  const [image, setImage] = useState([]);
+  const [selectedDescription , setSelectedDescription ]= useState("");
+
   useEffect(() => {
     addImage();
   }, []);
@@ -27,6 +28,7 @@ useEffect(() => {
       name: selectedName,
       url: selectedImageUrl,
       pri: selectedPrice,
+      description :selectedDescription,
     };
     axios
       .post("http://localhost:5000/app/addImage", body)
@@ -62,7 +64,7 @@ useEffect(() => {
             <td data-cell="name">{payment.Email}</td>
             <td data-cell="poles">{payment.Username}</td>
             <td data-cell="podiums">{payment.PaymentID}</td>
-            <td data-cell="wins">37</td>
+            <td data-cell="wins"></td>
             <td data-cell="career points">2080.5</td>
           </tr>
         ))}
@@ -99,6 +101,15 @@ useEffect(() => {
               onChange={(evt) => setSelectedPrice(evt.target.value)}
             />
             <label>Price</label>
+          </div>
+          <div class="user-box">
+            <input
+              type="text"
+              name=""
+              required=""
+              onChange={(evt) => setSelectedDescription(evt.target.value)}
+            />
+            <label>Description</label>
           </div>
           <a href="#" onClick={() => addImage()}>
             Submit

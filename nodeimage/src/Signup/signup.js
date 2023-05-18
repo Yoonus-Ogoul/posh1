@@ -25,12 +25,17 @@ const Signup = () => {
                 <div class="inputContainer">
                         <label class="label" for="emailAddress"><img src="https://static.thenounproject.com/png/2191156-200.png" class="labelIcon"/><span>Username
                                 *</span></label>
-                        <input type="email" class="input" id="emailAddress" placeholder="Enter your Email Address"/>
+                        <input type="text" class="input" id="emailAddress" placeholder="Enter your Username"/>
                     </div>
                     <div class="inputContainer">
                         <label class="label" for="emailAddress"><img src="https://i.imgur.com/Hn13wvm.png" class="labelIcon"/><span>Email
                                 Address*</span></label>
                         <input type="email" class="input" id="emailAddress" placeholder="Enter your Email Address"/>
+                    </div>
+                    <div class="inputContainer">
+                        <label class="label" for="emailAddress"><img src="https://i.imgur.com/Hn13wvm.png" class="labelIcon"/><span>Phone Number
+                                *</span></label>
+                        <input type="number" class="input" id="emailAddress" placeholder="Enter your Phone Number"/>
                     </div>
                     
                     <div class="inputContainer">
