@@ -53,6 +53,34 @@ const addUser = async (req, res) => {
     return res.status(400).send({ error });
   }
 };
+const login = async (req, res) => {
+  try {
+    console.log("I am body", req.body);
+    const { email, password } = req.body;
+    //If this user exists in database
+    let user = await User.findOne({ email });
+    //If no user find return to client 
+    if(!user)
+    return res.status(200).send({ response:"User not found" });
+
+    if(user && user.password != password ){
+      return res.status(200).send({ response:"Incorrect Password" });
+    }
+
+    return res.status(200).send({ user});
+   
+
+    // const app = new User(req.body);
+    // sendUserEmail(req.body);
+    // app.userId = Date.now();
+    // await app.save();
+    // return res.status(200).send({ app });
+  } catch (error) {
+    // console.log(error)
+    return res.status(400).send({ error });
+  }
+};
+
 const getImages = async (req, res) => {
   try {
     const ImageModel = req.params.imageId;
@@ -75,4 +103,4 @@ const sendSuccessMail = async (req, res) => {
     return res.status(400).send({ message: "failed " });
   }
 };
-module.exports = { addImage ,getImages,sendSuccessMail, addUser,addPayment,getPayments};
+module.exports = {login , addImage ,getImages,sendSuccessMail, addUser,addPayment,getPayments};

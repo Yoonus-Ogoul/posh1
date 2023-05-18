@@ -10,6 +10,8 @@ function Home() {
  ;
  const [price, setPrice] = useState([]);
   const [image, setImage] = useState([]);
+  const [user, setUser] = useState("");
+  const [isLogged, setIsLogged] = useState(false);
   const [userDetails, setUserDetails] = useState({
     name: "",
     email: "",
@@ -19,6 +21,11 @@ function Home() {
 
   useEffect(() => {
     getAllImages();
+
+    setUser(JSON.parse(localStorage.getItem("user")))
+    if(localStorage.getItem("user"))
+    setIsLogged(true)
+    
   }, []);
 
   const getAllImages = () => {
@@ -37,7 +44,7 @@ function Home() {
 
   return (
     <div className="">
-     <NavBar/>
+     <NavBar isLogged={isLogged} user={user}/>
      
       {image.map((image) => (
         <div class="productRow cf">

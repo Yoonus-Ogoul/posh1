@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import "./navbar.css";
 
-const NavBar = () => {
+const NavBar = ({isLogged,user}) => {
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
 
@@ -19,6 +19,8 @@ const NavBar = () => {
   }
 
 
+console.log(JSON.stringify(user))
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -29,11 +31,11 @@ const NavBar = () => {
       <div class="nav-main">
         <img
           class="img1"
-          src="https://i.postimg.cc/Y05gjC6C/Screenshot-2023-01-26-21-07-44.png" onClick={() => navigate("/Home")}
+          src="https://i.postimg.cc/Y05gjC6C/Screenshot-2023-01-26-21-07-44.png" onClick={() => navigate("/")}
           />
         <ul class="nav-links">
           <li class="nav-link">
-            <a class="posh" href="" onClick={() => navigate("/Home")}>
+            <a class="posh" href="" onClick={() => navigate("/")}>
               {" "}
               Home{" "}
             </a>
@@ -51,9 +53,15 @@ const NavBar = () => {
       <Button variant="primary" onClick={handleShow}>
         Cart
       </Button>
-      <Button variant="primary" onClick={() => navigate("/Signin")}>
+      {
+        !isLogged && <Button variant="primary" onClick={() => navigate("/Signin")}>
         sign in 
       </Button>
+      }
+       {
+        isLogged && <div>{user.userName}</div>
+      }
+      
       
         <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
